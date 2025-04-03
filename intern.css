@@ -1,0 +1,97 @@
+/* เริ่มต้น Navbar ขนาดปกติ */
+.navbar {
+    padding: 5px 0; 
+    transition: padding 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    position: fixed;
+    width: 100%; /* ครอบคลุมความกว้างเต็มหน้าจอ */
+    top: 0;
+    z-index: 9999;
+    /* ตั้งพื้นหลังแบบ gradient ที่โปร่งแสง เพื่อให้ข้อความสีขาวอ่านได้ชัด */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65));
+}
+
+/* เมื่อ navbar เลื่อนลงและมีคลาส .navbar-small */
+.navbar-small {
+    padding: 3px 0; /* ลด padding เมื่อ navbar ย่อลง */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65));
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ปรับขนาดโลโก้ใน navbar */
+.navbar-brand img {
+    height: 50px; /* ขนาดโลโก้ปกติ */
+    transition: height 0.3s ease;
+}
+
+.navbar-small .navbar-brand img {
+    height: 40px; /* ขนาดโลโก้เมื่อ navbar เลื่อนลง */
+}
+
+/* ปรับขนาดตัวอักษรของลิงก์ใน navbar */
+.navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+    transition: font-size 0.3s ease;
+}
+
+.navbar-small .navbar-nav .nav-item .nav-link {
+    font-size: 12px;
+}
+
+/* Spacer สำหรับ navbar เพื่อผลักเนื้อหาไม่ให้โดน navbar ทับ */
+.navbar-offset {
+    height: 200px; /* ปรับความสูงให้ตรงกับความสูงของ navbar ที่ต้องการ */
+}
+
+/* สไตล์ของรูปภาพในส่วน Internship (ภาพวงกลม) */
+.image-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.image-circle:hover {
+    transform: scale(1.1);
+}
+
+/* สไตล์ของรูปภาพในส่วน Portfolio */
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-text {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+/* การเลื่อนของ navbar เมื่อวางเมาส์ */
+.navbar:hover {
+    transform: translateY(-5px);
+}
+
+.navbar-small {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* กำหนด padding-top ให้กับ container ถ้าต้องการพื้นที่เพิ่มจากส่วนอื่น (ปรับได้ตามต้องการ) */
+.container {
+    padding-top: 20px;
+}
+
+/* เพิ่มระยะห่างให้กับ #internship */
+#internship {
+    margin-top: 500px;
+}
